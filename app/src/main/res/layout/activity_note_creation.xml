@@ -8,7 +8,15 @@
   <ScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_marginBottom="40">
+      android:layout_marginBottom="@dimen/_40sdp"
+      android:clipToPadding="false"
+      android:paddingBottom="@dimen/_10sdp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
   </ScrollView>
 
