@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/color_app_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/notes_text"
+        android:layout_width="103dp"
+        android:layout_height="53dp"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginVertical="23dp"
+        android:layout_marginTop="@android:dimen/app_icon_size"
+        android:orientation="horizontal"
+        android:text="@string/notes"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/search_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <LinearLayout
+        android:id="@+id/search_icon"
+        android:layout_width="55dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/background_searcher"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/notes_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04000002">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_search"
+            android:tint="@color/search_icon_color">
+
+        </ImageView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="427dp"
+        android:layout_height="738dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_icon"
+        app:layout_editor_absoluteX="4dp"
+        app:layout_editor_absoluteY="93dp">
+
+        <view
+            android:id="@+id/notes_RecyclerView"
+            class="androidx.appcompat.app.AlertController$RecycleListView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:clipToPadding="false"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </ScrollView>
+
+        <ImageView
+            android:id="@+id/imageAddition_icon"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_addition"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/background_addition_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
