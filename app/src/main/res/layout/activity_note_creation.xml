@@ -3,20 +3,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NoteCreationActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NoteCreationActivity"
+    android:background="@color/color_app_background"
+    android:orientation="vertical">
 
-  <ScrollView
+  <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_marginBottom="@dimen/_40sdp"
-      android:clipToPadding="false"
-      android:paddingBottom="@dimen/_10sdp">
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/background_back_icon"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:padding="@dimen/_1sdp"
         >
 
+      <ImageView
+          android:id="@+id/image_backIcon"
+          android:layout_width="34dp"
+          android:layout_height="31dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginTop="1dp"
+          android:layout_marginEnd="1dp"
+          android:layout_marginBottom="2dp"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/ic_back_arrow"
+          android:tint="@color/white"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+      </ImageView>
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_back_icon"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:padding="@dimen/_1sdp"
+        android:layout_marginRight="0dp"
+        >
+
+      <ImageView
+          android:id="@+id/notes_icon"
+          android:layout_width="34dp"
+          android:layout_height="31dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginTop="5dp"
+          android:layout_marginEnd="2dp"
+          android:layout_marginBottom="2dp"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/ic_note_icon"
+          android:tint="@color/white"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          >
+
+      </ImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </LinearLayout>
+
+
+  <ScrollView
+      android:id="@+id/scroll_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:layout_marginEnd="@dimen/_3sdp"
+      android:layout_marginBottom="0dp"
+      android:contentDescription="@string/notes">
 
   </ScrollView>
 
