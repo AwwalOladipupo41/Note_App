@@ -7,8 +7,9 @@
         <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/background_back_icon.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/background_note_icon.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/background_searcher.xml" value="0.1" />
-        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/activity_note_creation.xml" value="0.152" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
       </map>
     </option>
   </component>
