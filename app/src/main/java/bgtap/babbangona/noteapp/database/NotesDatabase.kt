@@ -5,27 +5,28 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import bgtap.babbangona.noteapp.dao.NoteDao
 import bgtap.babbangona.noteapp.entities.Notes
+import bgtap.babbangona.noteapp.dao.NoteDao
 
 
 @Database
     (entities = [Notes::class], version=1, exportSchema=false)
-abstract class Notes_Database:RoomDatabase() {
+abstract class NotesDatabase:RoomDatabase() {
 
     companion object{
-        var notesDatabase:Notes_Database?=null
+        var notesDatabase:NotesDatabase?=null
 
         @Synchronized
-        fun getDatabase(context: Context):Notes_Database{
+        fun getDatabase(context: Context):NotesDatabase{
             if(notesDatabase!=null){
                 notesDatabase= Room.databaseBuilder(
-                    context,Notes_Database::class.java, "notes.db").build()
+                    context
+                    ,NotesDatabase::class.java, "notes.db").allowMainThreadQueries().fallbackToDestructiveMigration().build()
 
             }
             return notesDatabase!!
         }
 
     }
-    abstract fun noteDao():NoteDao
+    abstract fun noteDao(): NoteDao
 }
