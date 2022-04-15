@@ -14,6 +14,9 @@ class Notes: Serializable {
         @ColumnInfo(name = "title")
         var title:String? = null
 
+        @ColumnInfo(name = "sub_title")
+        var subTitle:String? = null
+
         @ColumnInfo(name = "date_time")
         var dateTime:String? = null
 
@@ -23,9 +26,11 @@ class Notes: Serializable {
         @ColumnInfo(name = "img_path")
         var imgPath:String? = null
 
+        @ColumnInfo(name = "web_link")
+        var webLink:String? = null
+
         @ColumnInfo(name = "color")
         var color:String? = null
-
 
         override fun toString(): String {
 
