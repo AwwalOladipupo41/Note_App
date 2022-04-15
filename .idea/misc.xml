@@ -3,13 +3,35 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable-v24/ic_search.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/background_addition_icon.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/background_back_icon.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/background_note_icon.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/background_searcher.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/ic_baseline_cancel_24.xml" value="0.1175925925925926" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/ic_delete.xml" value="0.1175925925925926" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/ic_image.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/ic_link.xml" value="0.1175925925925926" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/ic_more.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/ic_tick.xml" value="0.1175925925925926" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/note_color_1.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/note_color_2.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/note_color_3.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/note_color_4.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/note_color_5.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/note_color_6.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/drawable/note_color_7.xml" value="0.1" />
         <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/activity_note_creation.xml" value="0.152" />
-        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/activity_note_creation.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/fragment_base.xml" value="0.18125" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/fragment_create_note.xml" value="0.264" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/fragment_created_note.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/fragment_home.xml" value="0.536" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/fragment_note_bottom_sheet.xml" value="0.18125" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/fragment_notes_bottom_sheet.xml" value="0.264" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/item_rv_notes.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/note_color_1.xml" value="0.1" />
+        <entry key="..\:/Users/bglag/AndroidStudioProjects/NoteApp/app/src/main/res/layout/note_display.xml" value="0.1" />
       </map>
     </option>
   </component>
@@ -18,5 +40,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>

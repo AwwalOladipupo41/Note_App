@@ -5,7 +5,7 @@
     <string name="addnotes">addNotes</string>
     <string name="makenotes">makeNotes</string>
     <string name="make_notes">make_notes</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="storage_permission_text">This app needs access to your storage.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="note_back_arrow">Note_back_arrow</string>
     <string name="notes_title">Notes Title</string>
@@ -22,4 +22,6 @@
     <string name="add_image">Add Image</string>
     <string name="pick_color">Pick Color</string>
     <string name="note_description">note description</string>
+    <string name="todo">TODO</string>
+    <string name="add_notes">Add notes</string>
 </resources>
