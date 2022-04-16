@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -23,7 +22,6 @@ import java.util.*
     class CreateNoteFragment : BaseFragment(){
     var selectedColor = "#171C26"
     var currentDate:String? = null
-    private var selectedImagePath = ""
     private var noteId = -1
         override val colorView: Any
             get() = TODO("Not yet implemented")
@@ -66,17 +64,6 @@ import java.util.*
 
                     etNoteTitle.setText(notes.title)
                     etNoteDesc.setText(notes.noteText)
-                    if (notes.imgPath != ""){
-                        selectedImagePath = notes.imgPath!!
-                        imgNote.setImageBitmap(BitmapFactory.decodeFile(notes.imgPath))
-                        layoutImage.visibility = View.VISIBLE
-                        imgNote.visibility = View.VISIBLE
-                        imgDelete.visibility = View.VISIBLE
-                    }else{
-                        imgNote.visibility = View.GONE
-                        imgDelete.visibility = View.GONE
-                    }
-
                 }
             }
         }
@@ -112,12 +99,6 @@ import java.util.*
             noteBottomSheetFragment.show(requireActivity().supportFragmentManager,"Note Bottom Sheet Fragment")
         }
 
-        imgDelete.setOnClickListener {
-            selectedImagePath = ""
-            layoutImage.visibility = View.GONE
-
-        }
-
     }
 
 
@@ -131,7 +112,7 @@ import java.util.*
                 notes.noteText = etNoteDesc.text.toString()
                 notes.NoteDate = currentDate
                 notes.color = selectedColor
-                notes.imgPath = selectedImagePath
+
 
                 NotesDatabase.getDatabase(it).noteDao().updateNote(notes)
                 etNoteTitle.setText("")
@@ -162,7 +143,7 @@ import java.util.*
                     notes.noteText = etNoteDesc.text.toString()
                     notes.NoteDate = currentDate
                     notes.color = selectedColor
-                    notes.imgPath = selectedImagePath
+
                     context?.let {
                         NotesDatabase.getDatabase(it).noteDao().insertNotes(notes)
                         etNoteTitle.setText("")

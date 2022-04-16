@@ -20,9 +20,6 @@ class Notes: Serializable {
         @ColumnInfo(name = "note_text")
         var noteText:String? = null
 
-        @ColumnInfo(name = "img_path")
-        var imgPath:String? = null
-
         @ColumnInfo(name = "color")
         var color:String? = null
 
