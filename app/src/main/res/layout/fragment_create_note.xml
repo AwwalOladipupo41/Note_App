@@ -71,7 +71,7 @@
     </EditText>
 
     <TextView
-        android:id="@+id/tvDateTime"
+        android:id="@+id/tvNoteDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
@@ -90,17 +90,14 @@
         app:layout_constraintTop_toBottomOf="@id/etNoteTitle" />
 
     <LinearLayout
-        android:id="@+id/l1"
+        android:id="@+id/layoutforpositioning"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10sdp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDateTime">
-
-
-
+        app:layout_constraintTop_toBottomOf="@id/tvNoteDate">
     </LinearLayout>
 
     <RelativeLayout
@@ -108,7 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/l1">
+        app:layout_constraintTop_toBottomOf="@id/layoutforpositioning">
 
 
 
@@ -125,99 +122,16 @@
             android:id="@+id/imgDelete"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_alignParentEnd="true"
-            android:visibility="gone"
             android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/ic_delete"
-            android:contentDescription="@string/todo" />
+            android:visibility="gone" />
 
 
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/layoutWebUrl"
-        android:background="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="@dimen/_10sdp"
-        android:visibility="gone"
-        android:layout_margin="@dimen/_10sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutImage"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-            <EditText
-                android:id="@+id/etWebLink"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@null"
-                android:fontFamily="@font/manrope_regular"
-                android:hint="@string/web_url"
-                android:inputType="textMultiLine"
-                android:padding="@dimen/_10sdp"
-                android:text="@string/http"
-                android:textColor="@color/ColorWhite"
-                android:textColorHint="@color/ColorGray"
-                android:textSize="@dimen/_12ssp" />
-            <ImageView
-                android:id="@+id/imgUrlDelete"
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
-                android:visibility="gone"
-                android:src="@drawable/ic_baseline_cancel_24"
-                android:contentDescription="TODO" />
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:gravity="end"
-            android:orientation="horizontal">
-
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_30sdp"
-                android:fontFamily="@font/manrope_bold"
-                android:background="@color/colorAccent"
-                android:text="@string/cancel"
-                android:textSize="@dimen/_12ssp"
-                android:textAllCaps="false"
-                android:textColor="@color/ColorWhite"
-                android:id="@+id/btnCancel"
-                style="?android:attr/buttonBarButtonStyle" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_30sdp"
-                android:fontFamily="@font/manrope_bold"
-                android:background="@color/colorAccent"
-                android:text="@string/ok"
-                android:textAllCaps="false"
-                android:textSize="@dimen/_12ssp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:textColor="@color/ColorWhite"
-                android:id="@+id/btnOk"
-                style="?android:attr/buttonBarButtonStyle" />
-
-
-        </LinearLayout>
-    </LinearLayout>
-
-
 
     <EditText
         android:id="@+id/etNoteDesc"
