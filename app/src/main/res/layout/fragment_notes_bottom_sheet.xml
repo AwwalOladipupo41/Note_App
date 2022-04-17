@@ -49,10 +49,10 @@
 
             <ImageView
                 android:id="@+id/imgNote1"
-                android:layout_width="@dimen/_16sdp"
-                android:layout_height="@dimen/_16sdp"
+                android:layout_width="15dp"
+                android:layout_height="14dp"
                 android:layout_gravity="center"
-                app:tint="@color/ColorWhite"/>
+                app:tint="@color/ColorWhite" />
         </FrameLayout>
 
         <FrameLayout

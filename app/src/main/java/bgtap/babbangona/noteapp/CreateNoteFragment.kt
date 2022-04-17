@@ -190,7 +190,7 @@ import java.util.*
                     }
 
 
-                    "Purple" -> {
+                    "Pink" -> {
                         selectedColor = p1.getStringExtra("selectedColor")!!
 
 
@@ -211,7 +211,7 @@ import java.util.*
                     }
 
 
-                    "Black" -> {
+                    "Purple" -> {
                         selectedColor = p1.getStringExtra("selectedColor")!!
 
 
