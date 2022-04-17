@@ -18,9 +18,9 @@ import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
-
+//#171C26
     class CreateNoteFragment : BaseFragment(){
-    var selectedColor = "#171C26"
+    var selectedColor = "#ffffff"
     var currentDate:String? = null
     private var noteId = -1
         override val colorView: Any
@@ -72,7 +72,7 @@ import java.util.*
         )
 
 
-        val sdf = SimpleDateFormat("dd.LLL.yyyy")
+        val sdf = SimpleDateFormat("LLL dd, yyyy")
 
         currentDate = sdf.format(Date())
 

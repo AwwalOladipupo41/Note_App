@@ -36,13 +36,12 @@ class NotesAdapter() :
     override fun onBindViewHolder(holder: NotesViewHolder, position: Int) {
 
         holder.itemView.tvTitle.text = arrList[position].title
-        holder.itemView.tvDesc.text = arrList[position].noteText
         holder.itemView.tvNoteDate.text = arrList[position].NoteDate
 
         if (arrList[position].color != null){
             holder.itemView.cardView.setCardBackgroundColor(Color.parseColor(arrList[position].color))
         }else{
-            holder.itemView.cardView.setCardBackgroundColor(Color.parseColor(R.color.ColorLightBlack.toString()))
+            holder.itemView.cardView.setCardBackgroundColor(Color.parseColor(R.color.white.toString()))
         }
         holder.itemView.cardView.setOnClickListener {
             listener!!.onClicked(arrList[position].id!!)
