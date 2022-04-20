@@ -8,47 +8,26 @@
     tools:context=".MainActivity"
     android:background="@color/color_app_background"
     >
-
-    <TextView
-        android:id="@+id/tvNotestext"
-        android:layout_width="103dp"
-        android:layout_height="53dp"
-        android:layout_marginHorizontal="17dp"
-        android:layout_marginVertical="23dp"
-        android:layout_marginTop="@android:dimen/app_icon_size"
-        android:orientation="horizontal"
-        android:text="@string/notes"
-        android:textColor="@color/white"
-        android:textSize="36sp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Notes"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:titleTextColor="@color/ColorWhite"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012" />
-
-    <SearchView
-        android:id="@+id/search_view"
-        android:layout_width="49dp"
-        android:layout_height="43dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/background_searcher"
-        android:gravity="center"
-        android:contentDescription="@string/search_your_notes"
-        android:orientation="horizontal"
-        android:searchIcon="@drawable/ic_search"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNotestext"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04000002">
-    </SearchView>
+        android:layout_marginVertical="0dp"
+        app:layout_constraintBottom_toTopOf="@id/notesScrollView"
+        />
 
     <ScrollView
+        android:id="@+id/notesScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNotestext">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
