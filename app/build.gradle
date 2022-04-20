@@ -50,6 +50,10 @@ dependencies {
     //coroutines core
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
 
+    // kotlin extensions for coroutine
+    implementation("androidx.room:room-ktx:2.4.2")
+    // kotlin extensions for coroutine
+    implementation("androidx.activity:activity-ktx:1.4.0")
     //circle image view
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
