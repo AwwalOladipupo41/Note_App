@@ -1,23 +1,29 @@
 package bgtap.babbangona.noteapp
 
+import android.app.SearchManager
+import android.content.Context
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.SearchView
+import androidx.appcompat.resources.Compatibility.Api21Impl.inflate
+import androidx.core.content.ContextCompat.getSystemService
+import androidx.core.graphics.drawable.DrawableCompat.inflate
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import bgtap.babbangona.noteapp.adapter.NotesAdapter
 import bgtap.babbangona.noteapp.database.NotesDatabase
+import bgtap.babbangona.noteapp.databinding.ActivityMainBinding.inflate
+import bgtap.babbangona.noteapp.databinding.FragmentCreateNoteBinding.inflate
 import bgtap.babbangona.noteapp.entities.Notes
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.coroutines.launch
 import java.util.*
+import java.util.zip.Inflater
 import kotlin.collections.ArrayList
 
 class HomeFragment : BaseFragment() {
 
-    var arrNotes = ArrayList<Notes>()
+    var arrayNotes = ArrayList<Notes>()
     var notesAdapter: NotesAdapter = NotesAdapter()
     override val colorView: Any
         get() = TODO("Not yet implemented")
@@ -48,19 +54,21 @@ class HomeFragment : BaseFragment() {
             }
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         recycler_view.setHasFixedSize(false)
 
-        recycler_view.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
+        recycler_view.layoutManager =
+            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
 
         launch {
             context?.let {
                 var notes = NotesDatabase.getDatabase(it).noteDao().getAllNotes()
                 notesAdapter!!.setData(notes)
-                arrNotes = notes as ArrayList<Notes>
+                arrayNotes = notes as ArrayList<Notes>
                 recycler_view.adapter = notesAdapter
             }
         }
@@ -68,33 +76,52 @@ class HomeFragment : BaseFragment() {
         notesAdapter!!.setOnClickListener(onClicked)
 
         fabBtnCreateNote.setOnClickListener {
-            replaceFragment(CreateNoteFragment.newInstance(),false)
+            replaceFragment(CreateNoteFragment.newInstance(), false)
         }
 
-        search_view.setOnQueryTextListener( object : SearchView.OnQueryTextListener{
-            override fun onQueryTextSubmit(p0: String?): Boolean {
-                return true
+        class HomeFragment : Fragment() {
+            override fun onCreate(savedInstanceState: Bundle?) {
+                super.onCreate(savedInstanceState)
+                setHasOptionsMenu(true)
             }
+        }
 
-            override fun onQueryTextChange(p0: String?): Boolean {
+         fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
 
-                var tempArr = ArrayList<Notes>()
+            val searchItem = menu.findItem(R.id.menu_search)
+            val search_view = searchItem.actionView as SearchView
+            toolbar.inflateMenu(R.menu.search_menu)
+            search_view.isSubmitButtonEnabled = true
+            super.onCreateOptionsMenu(menu, inflater)
 
-                for (arr in arrNotes){
-                    if (arr.title!!.toLowerCase(Locale.getDefault()).contains(p0.toString())){
-                        tempArr.add(arr)
-                    }
+             toolbar.setOnMenuItemClickListener {
+                 onOptionsItemSelected(it)
+             }
+            search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                override fun onQueryTextSubmit(p0: String?): Boolean {
+                    return true
                 }
 
-                notesAdapter.setData(tempArr)
-                notesAdapter.notifyDataSetChanged()
-                return true
-            }
+                override fun onQueryTextChange(p0: String?): Boolean {
 
-        })
+                    var tempArr = ArrayList<Notes>()
 
+                    for (arr in arrayNotes) {
+                        if (arr.title!!.toLowerCase(Locale.getDefault()).contains(p0.toString())) {
+                            tempArr.add(arr)
+                        }
+                    }
 
+                    notesAdapter.setData(tempArr)
+                    notesAdapter.notifyDataSetChanged()
+                    return true
+                }
+
+            })
+
+        }
     }
+
 
 
     private val onClicked = object :NotesAdapter.OnItemClickListener{
@@ -121,6 +148,8 @@ class HomeFragment : BaseFragment() {
         }
         fragmentTransition.replace(R.id.frame_layout,fragment).addToBackStack(fragment.javaClass.simpleName).commit()
     }
+
+
 
 
 }

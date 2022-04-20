@@ -160,11 +160,11 @@
 
         <ImageView
             android:id="@+id/imgMore"
-            android:layout_width="23dp"
-            android:layout_height="@dimen/_24sdp"
+            android:layout_width="404dp"
+            android:layout_height="54dp"
             android:layout_gravity="center"
             android:contentDescription="TODO"
-            android:src="@drawable/ic_more"
+
             app:tint="@color/white" />
     </FrameLayout>
 
