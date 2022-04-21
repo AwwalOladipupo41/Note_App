@@ -21,11 +21,30 @@
         app:layout_constraintBottom_toTopOf="@id/notesScrollView"
         />
 
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="49dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/background_searcher"
+        android:gravity="center"
+        android:contentDescription="@string/search_your_notes"
+        android:orientation="horizontal"
+        android:searchIcon="@drawable/ic_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    </SearchView>
+
     <ScrollView
         android:id="@+id/notesScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.631"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
@@ -35,11 +54,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNotestext"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/tvNotestext" />
 
     </ScrollView>
-
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"

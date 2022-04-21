@@ -9,7 +9,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.LiveData
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import bgtap.babbangona.noteapp.database.NotesDatabase
 import bgtap.babbangona.noteapp.entities.Notes

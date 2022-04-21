@@ -79,24 +79,23 @@ class HomeFragment : BaseFragment() {
             replaceFragment(CreateNoteFragment.newInstance(), false)
         }
 
-        class HomeFragment : Fragment() {
-            override fun onCreate(savedInstanceState: Bundle?) {
-                super.onCreate(savedInstanceState)
-                setHasOptionsMenu(true)
-            }
-        }
+       // class HomeFragment : Fragment() {
+       //     override fun onCreate(savedInstanceState: Bundle?) {
+        //        super.onCreate(savedInstanceState)
+        //        setHasOptionsMenu(true)
+        //    }
+       // }
 
-         fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+      //   fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
 
-            val searchItem = menu.findItem(R.id.menu_search)
-            val search_view = searchItem.actionView as SearchView
-            toolbar.inflateMenu(R.menu.search_menu)
-            search_view.isSubmitButtonEnabled = true
-            super.onCreateOptionsMenu(menu, inflater)
+         //   val searchItem = menu.findItem(R.id.menu_search)
+         //   val search_view = searchItem.actionView as SearchView
+         //   search_view.isSubmitButtonEnabled = true
+          //  super.onCreateOptionsMenu(menu, inflater)
 
-             toolbar.setOnMenuItemClickListener {
-                 onOptionsItemSelected(it)
-             }
+          //   toolbar.setOnMenuItemClickListener {
+           //      onOptionsItemSelected(it)
+          //   }
             search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(p0: String?): Boolean {
                     return true
@@ -119,7 +118,7 @@ class HomeFragment : BaseFragment() {
 
             })
 
-        }
+
     }
 
 
