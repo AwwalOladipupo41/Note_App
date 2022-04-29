@@ -4,6 +4,7 @@ import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
 import android.view.*
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import android.widget.SearchView
 import androidx.appcompat.resources.Compatibility.Api21Impl.inflate
@@ -33,6 +34,8 @@ class HomeFragment : BaseFragment() {
         arguments?.let {
         }
     }
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -79,29 +82,25 @@ class HomeFragment : BaseFragment() {
             replaceFragment(CreateNoteFragment.newInstance(), false)
         }
 
-       // class HomeFragment : Fragment() {
-       //     override fun onCreate(savedInstanceState: Bundle?) {
-        //        super.onCreate(savedInstanceState)
-        //        setHasOptionsMenu(true)
-        //    }
-       // }
+        notesAdapter!!.setOnClickListener(onClicked)
 
-      //   fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        searchImage.setOnClickListener {
+           showsearchView()
+        }
 
-         //   val searchItem = menu.findItem(R.id.menu_search)
-         //   val search_view = searchItem.actionView as SearchView
-         //   search_view.isSubmitButtonEnabled = true
-          //  super.onCreateOptionsMenu(menu, inflater)
 
-          //   toolbar.setOnMenuItemClickListener {
-           //      onOptionsItemSelected(it)
-          //   }
+
             search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
                 override fun onQueryTextSubmit(p0: String?): Boolean {
                     return true
                 }
 
                 override fun onQueryTextChange(p0: String?): Boolean {
+
+                    if (p0.isNullOrEmpty()){
+                        hidesearchView()
+                    }
+
 
                     var tempArr = ArrayList<Notes>()
 
@@ -118,9 +117,24 @@ class HomeFragment : BaseFragment() {
 
             })
 
+        search_view.setOnCloseListener {
+            hidesearchView()
+        return@setOnCloseListener true}
 
     }
 
+
+
+
+    private fun showsearchView() {
+        search_view.visibility= View.VISIBLE
+        searchImage.visibility=View.GONE
+    }
+
+    private fun hidesearchView() {
+        search_view.visibility= View.GONE
+        searchImage.visibility=View.VISIBLE
+    }
 
 
     private val onClicked = object :NotesAdapter.OnItemClickListener{

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Note App</string>
-    <string name="notes">Notes</string>
     <string name="submit" />
+    <string name="app_label">SimpleNoteApp</string>
     <string name="addnotes">addNotes</string>
     <string name="makenotes">makeNotes</string>
     <string name="make_notes">make_notes</string>
@@ -23,5 +23,9 @@
     <string name="pick_color">Pick Color</string>
     <string name="note_description">note description</string>
     <string name="todo">TODO</string>
+    <string name="search_hint">Search</string>
     <string name="add_notes">Add notes</string>
+    <string name="search">search</string>
+    <string name="searcher">Search</string>
+    <string name="notes">Notes</string>
 </resources>
